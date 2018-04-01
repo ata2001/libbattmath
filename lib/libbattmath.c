@@ -141,6 +141,9 @@ struct lbm_battery_device lbm_device_init(enum lbm_device device)
 	
 	//TODO: find a better way to choose correct lbm_battery_device
 	switch(device) {
+		case amami:
+			battery = lbm_battery_amami;
+			break;
 		case castor:
 			battery = lbm_battery_castor;
 			break;
